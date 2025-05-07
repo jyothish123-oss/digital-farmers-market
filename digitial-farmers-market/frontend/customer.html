@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Customer Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+  <header>
+    <h1>🛍️ Customer Dashboard</h1>
+    <button onclick="logout()" class="logout-btn">🚪 Logout</button>
+  </header>
+
+  <main>
+    <!-- Available Products -->
+    <section class="product-list">
+      <h2>🧺 Available Products</h2>
+      <div id="productList" class="grid-container">
+        <!-- Product cards will be injected here -->
+      </div>
+    </section>
+
+    <!-- Order History -->
+    <section class="order-list">
+      <h2>📦 My Orders</h2>
+      <div id="myOrders">
+        <!-- Orders will be loaded here in the future -->
+        <p>Coming soon...</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function logout() {
+      localStorage.removeItem('token');
+      window.location.href = 'login.html';
+    }
+  </script>
+  <script src="js/order.js"></script>
+</body>
+</html>
